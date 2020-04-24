@@ -8,11 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="RevenueReportTable")
+@Table(name="RevenueReport")
 public class RevenueReportTable {
 	
 	@Id
-	private String userId;
+	private int userId;
 	
 	@Column
 	private Date date;
@@ -29,11 +29,11 @@ public class RevenueReportTable {
 	@Column
 	private double price;
 
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 

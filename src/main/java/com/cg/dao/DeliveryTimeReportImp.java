@@ -27,9 +27,4 @@ public class DeliveryTimeReportImp implements DeliveryTimeReportI {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	
-
-	
-
 }

@@ -2,13 +2,14 @@ package com.cg.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="GrowthReportTable")
 public class GrowthReportTable {
 	
-	@Column
+	@Id
 	String period;
 	
 	@Column
@@ -55,15 +56,12 @@ public class GrowthReportTable {
 	}
 	
 	
-	public GrowthReportTable(String period, double revenue, double amountChange, double percentageGrowth,
-			String colrCode) {
-		super();
-		this.period = period;
-		this.revenue = revenue;
-		this.amountChange = amountChange;
-		this.percentageGrowth = percentageGrowth;
-		this.colrCode = colrCode;
-	}
+	
+	  public GrowthReportTable(String period, double revenue, double amountChange,
+	  double percentageGrowth, String colrCode) { super(); this.period = period;
+	  this.revenue = revenue; this.amountChange = amountChange;
+	  this.percentageGrowth = percentageGrowth; this.colrCode = colrCode; }
+	 
 	public GrowthReportTable() {
 		super();
 	}

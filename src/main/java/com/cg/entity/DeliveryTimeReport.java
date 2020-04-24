@@ -4,12 +4,15 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="GrowthReportTable")
+@Table(name="DeliveryTimeReport")
 public class DeliveryTimeReport {
 
+	@Id
+	private String userId;
 
 	@Column
 	private Date iteamDispatchTime;
