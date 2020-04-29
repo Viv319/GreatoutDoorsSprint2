@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import antlr.collections.List;
 
 @Repository
-public interface MonthlyGrowthReportI {
+public interface MonthlyGrowthReportDaoI {
 	
 	public List monthlyGrowthReport();
 }

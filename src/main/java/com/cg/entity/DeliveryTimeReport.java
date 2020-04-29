@@ -4,16 +4,13 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="DeliveryTimeReport")
 public class DeliveryTimeReport {
 
-	@Id
-	private String userId;
-
+	
 	@Column
 	private Date iteamDispatchTime;
 	
@@ -25,6 +22,10 @@ public class DeliveryTimeReport {
 	
 	@Column
 	private Date productCategoryRecieveTime;
+	
+	
+	
+	
 	
 	
 	public Date getIteamDispatchTime() {
@@ -39,23 +40,22 @@ public class DeliveryTimeReport {
 	public void setIteamRecieveTime(Date iteamRecieveTime) {
 		this.iteamRecieveTime = iteamRecieveTime;
 	}
-	public Date getproductCategoryDispatchTime() {
+	public Date getProductCategoryDispatchTime() {
 		return productCategoryDispatchTime;
 	}
-	public void setproductCategoryDispatchTime(Date productCategoryDispatchTime) {
+	public void setProductCategoryDispatchTime(Date productCategoryDispatchTime) {
 		this.productCategoryDispatchTime = productCategoryDispatchTime;
 	}
-	public Date getproductCategoryRecieveTime() {
+	public Date getProductCategoryRecieveTime() {
 		return productCategoryRecieveTime;
 	}
-	public void setproductCategoryRecieveTime(Date productCategoryRecieveTime) {
+	public void setProductCategoryRecieveTime(Date productCategoryRecieveTime) {
 		this.productCategoryRecieveTime = productCategoryRecieveTime;
 	}
-	
-	
-	public DeliveryTimeReport(Date iteamDispatchTime, Date iteamRecieveTime, Date productCategoryDispatchTime,
-			Date productCategoryRecieveTime) {
+	public DeliveryTimeReport(String userId, Date iteamDispatchTime, Date iteamRecieveTime,
+			Date productCategoryDispatchTime, Date productCategoryRecieveTime) {
 		super();
+		
 		this.iteamDispatchTime = iteamDispatchTime;
 		this.iteamRecieveTime = iteamRecieveTime;
 		this.productCategoryDispatchTime = productCategoryDispatchTime;
@@ -64,6 +64,9 @@ public class DeliveryTimeReport {
 	public DeliveryTimeReport() {
 		super();
 	}
+	
+	
+	
 	
 	
 

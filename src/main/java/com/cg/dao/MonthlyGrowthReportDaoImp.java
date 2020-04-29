@@ -2,7 +2,7 @@ package com.cg.dao;
 
 import antlr.collections.List;
 
-public class MonthlyGrowthReportImp implements MonthlyGrowthReportI{
+public class MonthlyGrowthReportDaoImp implements MonthlyGrowthReportDaoI{
 
 	@Override
 	public List monthlyGrowthReport() {
