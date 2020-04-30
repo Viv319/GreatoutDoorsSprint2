@@ -20,10 +20,10 @@ import com.cg.entity.GrowthReportTable;
 public class NewGreatoutDoorsApplication implements CommandLineRunner {
 
 	@Autowired
-	DeliveryTimeReportDaoI dDao;
+	DeliveryTimeReportDaoI deliverydao;
 	
-	@Autowired
-	GrowthReportTableDaoI gDao;
+//	@Autowired
+//	GrowthReportTableDaoI gDao;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(NewGreatoutDoorsApplication.class, args);
@@ -44,33 +44,33 @@ public class NewGreatoutDoorsApplication implements CommandLineRunner {
 		Date date9=new Date(25/01/2020);
 		Date date10= new Date(02/02/2020);
 		
-//		DeliveryTimeReport d1= new DeliveryTimeReport("A101",date1,date2,date3,date4);
-//		DeliveryTimeReport d2= new DeliveryTimeReport("A102",date5,date6,date7,date8);
-//		
-//		dDao.insertData(d1);
-//		dDao.insertData(d2);
-//		System.out.println("record inserted");
-//		
-//		List<DeliveryTimeReport> salesList =dDao.retrive();
-//		
-//		for(DeliveryTimeReport stu:salesList)
-//	 { System.out.println("iteam dispatch time "+ stu.getIteamDispatchTime() +" \n iteam receive time "+
-//			  stu.getIteamRecieveTime() +"\n rest can be implement here  " ); }
-//
-//	}
+		DeliveryTimeReport d1= new DeliveryTimeReport(101,date1,date2,date3,date4);
+		DeliveryTimeReport d2= new DeliveryTimeReport(102,date5,date6,date7,date8);
+		
+		deliverydao.insertData(d1);
+		deliverydao.insertData(d2);
+		System.out.println("record inserted");
+		
+		List<DeliveryTimeReport> salesList =deliverydao.retrive();
+		
+		for(DeliveryTimeReport stu:salesList)
+	 { System.out.println("iteam dispatch time "+ stu.getIteamDispatchTime() +" \n iteam receive time "+
+			  stu.getIteamRecieveTime() +"\n rest can be implement here  " ); }
+
+	}
 	
-	GrowthReportTable g1 = new GrowthReportTable("Jan",1800,1800,100,"Green");
-	GrowthReportTable g2 = new GrowthReportTable("Feb",2000,200,10,"Blue");
-	
-	gDao.insertData(g1);
-	gDao.insertData(g2);
-	
-		List<GrowthReportTable> growthSalesList =gDao.retrive();
-	
-		for(GrowthReportTable stu:growthSalesList)
-			{ System.out.println("percentage growth "+ stu.getPercentageGrowth() +" \n total revenue "+
-					stu.getRevenue() +"\n rest can be implement here  " ); }
-			}
-	
+//	GrowthReportTable g1 = new GrowthReportTable("Jan",1800,1800,100,"Green");
+//	GrowthReportTable g2 = new GrowthReportTable("Feb",2000,200,10,"Blue");
+//	
+//	gDao.insertData(g1);
+//	gDao.insertData(g2);
+//	
+//		List<GrowthReportTable> growthSalesList =gDao.retrive();
+//	
+//		for(GrowthReportTable stu:growthSalesList)
+//			{ System.out.println("percentage growth "+ stu.getPercentageGrowth() +" \n total revenue "+
+//					stu.getRevenue() +"\n rest can be implement here  " ); }
+//			}
+//	
 	
 }
