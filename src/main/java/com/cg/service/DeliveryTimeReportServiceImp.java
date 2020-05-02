@@ -9,16 +9,18 @@ import com.cg.dao.DeliveryTimeReportDaoI;
 import com.cg.entity.DeliveryTimeReport;
 
 @Service
-public class DeliveryTimeReportServiceImp implements DeliveryTimeReportDaoI {
+public class DeliveryTimeReportServiceImp implements DeliveryTimeReportServiceI {
 
 	@Autowired
-	DeliveryTimeReportDaoI deliverydao;
+	DeliveryTimeReportServiceI deliverydao;
+	
 	@Override
 	public void insertData(DeliveryTimeReport d) {
 		// TODO Auto-generated method stub
 		deliverydao.insertData(d);
 
 	}
+
 
 	@Override
 	public List retrive() {

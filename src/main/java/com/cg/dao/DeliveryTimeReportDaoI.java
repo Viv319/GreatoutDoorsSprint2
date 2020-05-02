@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import com.cg.entity.DeliveryTimeReport;
 
 
-@Repository
 public interface DeliveryTimeReportDaoI {
 	
 //		public List iteamDeliveryTime();

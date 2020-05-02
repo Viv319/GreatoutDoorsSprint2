@@ -11,12 +11,11 @@ import javax.persistence.Table;
 @Table(name="OrderTable")
 public class OrderTable {
 	
-	
 		@Id
-		private String orderId;
-		
+		private int userId;
+	
 		@Column
-		private String userId;
+		private String orderId;
 		
 		@Column
 		private String addressId;
@@ -38,13 +37,15 @@ public class OrderTable {
 			this.orderId = orderId;
 		}
 
-		public String getUserId() {
+		public int getUserId() {
 			return userId;
 		}
 
-		public void setUserId(String userId) {
+		public void setUserId(int userId) {
 			this.userId = userId;
 		}
+
+		
 
 		public String getAddressId() {
 			return addressId;
@@ -82,7 +83,16 @@ public class OrderTable {
 			super();
 		}
 		
-		
+		public OrderTable(int userId, String orderId, String addressId, byte orderDispatchStatus,
+				Date orderInitiateTime, Date orderDispatchTime) {
+			super();
+			this.userId = userId;
+			this.orderId = orderId;
+			this.addressId = addressId;
+			this.orderDispatchStatus = orderDispatchStatus;
+			this.orderInitiateTime = orderInitiateTime;
+			this.orderDispatchTime = orderDispatchTime;
+		}
 
 	}
 

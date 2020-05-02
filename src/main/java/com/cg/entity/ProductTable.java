@@ -10,13 +10,17 @@ import javax.persistence.Table;
 public class ProductTable {
 	
 	@Id
-	private String productId;
+	private int userId;
+	
+	@Column
+	private int productId;
 	
 	@Column
 	private double productPrice;
 	
 	@Column
 	private String productColour;
+	
 	
 	@Column
 	private String productDimension;
@@ -36,11 +40,19 @@ public class ProductTable {
 	@Column
 	private String productName;
 
-	public String getProductId() {
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public int getProductId() {
 		return productId;
 	}
 
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 
@@ -108,12 +120,23 @@ public class ProductTable {
 		this.productName = productName;
 	}
 
+	public ProductTable(int userId, int productId, double productPrice, String productColour, String productDimension,
+			int productQuantity, String productSpecification, int productCategory, String productManufacture,
+			String productName) {
+		super();
+		this.userId = userId;
+		this.productId = productId;
+		this.productPrice = productPrice;
+		this.productColour = productColour;
+		this.productDimension = productDimension;
+		this.productQuantity = productQuantity;
+		this.productSpecification = productSpecification;
+		this.productCategory = productCategory;
+		this.productManufacture = productManufacture;
+		this.productName = productName;
+	}
+
 	public ProductTable() {
 		super();
 	}
-	
-	
-	
-	
-
 }

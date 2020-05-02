@@ -9,10 +9,12 @@ import com.cg.dao.GrowthReportTableDaoI;
 import com.cg.entity.GrowthReportTable;
 
 @Service
-public class GrowthReportTableServiceImpl implements GrowthReportTableServiceI {
+public class GrowthReportTableServiceImp implements GrowthReportTableServiceI {
 
 	@Autowired
 	GrowthReportTableDaoI growthdao;
+	
+	
 	@Override
 	public void insertData(GrowthReportTable g) {
 		// TODO Auto-generated method stub
@@ -21,7 +23,7 @@ public class GrowthReportTableServiceImpl implements GrowthReportTableServiceI {
 	}
 
 	@Override
-	public List reterive() {
+	public List retrive() {
 		// TODO Auto-generated method stub
 		return growthdao.retrive();
 	}

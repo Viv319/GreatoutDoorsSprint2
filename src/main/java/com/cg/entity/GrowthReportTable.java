@@ -10,6 +10,9 @@ import javax.persistence.Table;
 public class GrowthReportTable {
 	
 	@Id
+	private int userId;
+	
+	@Column
 	String period;
 	
 	@Column
@@ -24,6 +27,12 @@ public class GrowthReportTable {
 	@Column
 	String colrCode;
 	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public String getPeriod() {
 		return period;
 	}
@@ -57,11 +66,18 @@ public class GrowthReportTable {
 	
 	
 	
-	  public GrowthReportTable(String period, double revenue, double amountChange,
-	  double percentageGrowth, String colrCode) { super(); this.period = period;
-	  this.revenue = revenue; this.amountChange = amountChange;
-	  this.percentageGrowth = percentageGrowth; this.colrCode = colrCode; }
-	 
+
+
+	public GrowthReportTable(int userId, String period, double revenue, double amountChange, double percentageGrowth,
+			String colrCode) {
+		super();
+		this.userId = userId;
+		this.period = period;
+		this.revenue = revenue;
+		this.amountChange = amountChange;
+		this.percentageGrowth = percentageGrowth;
+		this.colrCode = colrCode;
+	}
 	public GrowthReportTable() {
 		super();
 	}

@@ -7,11 +7,10 @@ import com.cg.entity.DeliveryTimeReport;
 
 import java.util.List;
 
-@Service
 public interface DeliveryTimeReportServiceI {
 
 	public void insertData(DeliveryTimeReport d);
-	public List reterive();
+	public List retrive();
 	
 	
 }

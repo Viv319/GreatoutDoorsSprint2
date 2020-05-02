@@ -2,14 +2,21 @@ package com.cg.entity;
 
 import java.util.Date;
 
+import javax.annotation.Priority;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.beans.factory.annotation.Qualifier;
 
 @Entity
 @Table(name="DeliveryTimeReport")
 public class DeliveryTimeReport {
 
+	
+	@Id
+	private int userId;
 	
 	@Column
 	private Date iteamDispatchTime;
@@ -25,7 +32,12 @@ public class DeliveryTimeReport {
 	
 	
 	
-	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	
 	
 	public Date getIteamDispatchTime() {
@@ -52,10 +64,12 @@ public class DeliveryTimeReport {
 	public void setProductCategoryRecieveTime(Date productCategoryRecieveTime) {
 		this.productCategoryRecieveTime = productCategoryRecieveTime;
 	}
-	public DeliveryTimeReport(String userId, Date iteamDispatchTime, Date iteamRecieveTime,
+
+
+	public DeliveryTimeReport(int userId, Date iteamDispatchTime, Date iteamRecieveTime,
 			Date productCategoryDispatchTime, Date productCategoryRecieveTime) {
 		super();
-		
+		this.userId = userId;
 		this.iteamDispatchTime = iteamDispatchTime;
 		this.iteamRecieveTime = iteamRecieveTime;
 		this.productCategoryDispatchTime = productCategoryDispatchTime;
