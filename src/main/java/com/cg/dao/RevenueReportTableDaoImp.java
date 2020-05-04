@@ -18,19 +18,19 @@ import org.springframework.stereotype.Repository;
 public class RevenueReportTableDaoImp implements RevenueReportTableDaoI{
 
 	@PersistenceContext
-	EntityManager em;
+	EntityManager entityManager;
 	
 //	@Override
 //	public void insertData(RevenueReportTable g) {
 //		// TODO Auto-generated method stub
-//		em.persist(g);
+//		entityManager.persist(g);
 //		
 //	}
 
 	@Override
 	public List retrive() {
 		// TODO Auto-generated method stub
-		Query q=em.createQuery("from RevenueReportTable g");
+		Query q=entityManager.createQuery("from RevenueReportTable g");
 		return q.getResultList();
 	}
 

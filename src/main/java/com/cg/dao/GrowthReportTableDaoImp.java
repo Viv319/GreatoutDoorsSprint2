@@ -18,20 +18,20 @@ import com.cg.entity.GrowthReportTable;
 public class GrowthReportTableDaoImp implements GrowthReportTableDaoI {
 
 	@PersistenceContext
-	EntityManager em;
+	EntityManager entityManager;
 	
 	@Override
 	public void insertData(GrowthReportTable g) {
 		// TODO Auto-generated method stub
 		
-		em.persist(g);
+		entityManager.persist(g);
 
 	}
 
 	@Override
 	public List retrive() {
 		// TODO Auto-generated method stub
-		Query q=em.createQuery("from GrowthReportTable g");
+		Query q=entityManager.createQuery("from GrowthReportTable g");
 		return q.getResultList();
 	}
 

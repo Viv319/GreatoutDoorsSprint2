@@ -14,7 +14,7 @@ import com.cg.service.DeliveryTimeReportServiceI;
 import com.cg.service.GrowthReportTableServiceI;
 import com.cg.service.RevenueReportTableServiceI;
 
-//@CrossOrigin(origins="*")
+@CrossOrigin(origins="*")
 @RestController
 public class Controller {
 
@@ -51,7 +51,7 @@ public class Controller {
 		  return "data added successfuly";
 	  }
 	  
-	  /*@GetMapping(value = "/revenueReportTable")
+	 /* @GetMapping(value = "/revenueReportTable")
 		public List<RevenueReportTable> fetchRevenueTable() {
 			return rService.retrive();
 		}

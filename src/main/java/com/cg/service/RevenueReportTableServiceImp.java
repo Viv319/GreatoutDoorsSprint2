@@ -15,12 +15,12 @@ public class RevenueReportTableServiceImp implements RevenueReportTableServiceI 
 	@Autowired
 	RevenueReportTableDaoI revenueDao;
 	
-	/*@Override
-	public void insertData(RevenueReportTable g) {
-		// TODO Auto-generated method stub
-		revenueDao.insertData(g);
-	}
-	*/
+//	@Override
+//	public void insertData(RevenueReportTable g) {
+//		// TODO Auto-generated method stub
+//		revenueDao.insertData(g);
+//	}
+	
 
 	@Override
 	public List retrive() {

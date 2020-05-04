@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface RevenueReportTableServiceI {
 
-	//public void insertData(RevenueReportTable g);
+//	public void insertData(RevenueReportTable g);
 	public List retrive();
 
 }

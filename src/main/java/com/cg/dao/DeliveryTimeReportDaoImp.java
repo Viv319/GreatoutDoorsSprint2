@@ -17,20 +17,20 @@ import com.cg.entity.DeliveryTimeReport;
 public class DeliveryTimeReportDaoImp implements DeliveryTimeReportDaoI {
 
 	@PersistenceContext
-	EntityManager em;
+	EntityManager entityManager;
 	
 	
 	@Override
 	public void insertData(DeliveryTimeReport d1) {
 		// TODO Auto-generated method stub
-		em.persist(d1);
+		entityManager.persist(d1);
 		
 	}
 
 	@Override
 	public List retrive() {
 		// TODO Auto-generated method stub
-		Query q=em.createQuery("from DeliveryTimeReport d");
+		Query q=entityManager.createQuery("from DeliveryTimeReport d");
 		return q.getResultList();
 	}
 }

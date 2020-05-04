@@ -21,8 +21,8 @@ import com.cg.entity.GrowthReportTable;
 @SpringBootApplication
 public class NewGreatoutDoorsApplication implements CommandLineRunner {
 
-//	@Autowired
-//	DeliveryTimeReportDaoI deliverydao;
+	@Autowired
+	DeliveryTimeReportDaoI deliverydao;
 	
 	@Autowired
 	GrowthReportTableDaoI growthDao;
@@ -49,27 +49,28 @@ public class NewGreatoutDoorsApplication implements CommandLineRunner {
 		Date date9=new Date(25/01/2020);
 		Date date10= new Date(02/02/2020);
 		
-//		DeliveryTimeReport d1= new DeliveryTimeReport(101,date1,date2,date3,date4);
-//		DeliveryTimeReport d2= new DeliveryTimeReport(102,date5,date6,date7,date8);
-//		
-//		deliverydao.insertData(d1);
-//		deliverydao.insertData(d2);
-//		System.out.println("record inserted");
-//		
-//		List<DeliveryTimeReport> salesList =deliverydao.retrive();
-//		
-//		for(DeliveryTimeReport stu:salesList) { 
-//			System.out.println("1) iteam dispatch time "+ stu.getIteamDispatchTime() +
-//					" \n 2)iteam receive time "+ stu.getIteamRecieveTime() +
-//					" \n 3)product category dispatch time"+ stu.getProductCategoryDispatchTime() +
-//					" \n 4)product category recieve time"+ stu.getProductCategoryRecieveTime() +
-//					
-//					"\n rest can be implement here  " ); 
-//			}
-//
-//	}
+		/*DeliveryTimeReport d1= new DeliveryTimeReport(101,date1,date2,date3,date4);
+		DeliveryTimeReport d2= new DeliveryTimeReport(102,date5,date6,date7,date8);
+		
+		deliverydao.insertData(d1);
+		deliverydao.insertData(d2);
+		System.out.println("record inserted");
+		
+		List<DeliveryTimeReport> salesList =deliverydao.retrive();
+		
+		for(DeliveryTimeReport stu:salesList) { 
+			System.out.println("1) iteam dispatch time "+ stu.getIteamDispatchTime() +
+					" \n 2)iteam receive time "+ stu.getIteamRecieveTime() +
+					" \n 3)product category dispatch time"+ stu.getProductCategoryDispatchTime() +
+					" \n 4)product category recieve time"+ stu.getProductCategoryRecieveTime() +
+					
+					"\n rest can be implement here  " ); 
+			}
+
+	}
+	*/
 	
-/*	GrowthReportTable g1 = new GrowthReportTable(101,"Jan",1800,1800,100,"Green");
+		GrowthReportTable g1 = new GrowthReportTable(101,"Jan",1800,1800,100,"Green");
 	GrowthReportTable g2 = new GrowthReportTable(102,"Feb",2000,200,10,"Blue");
 	
 	growthDao.insertData(g1);
@@ -85,7 +86,7 @@ public class NewGreatoutDoorsApplication implements CommandLineRunner {
 			
 			+"\n rest can be implement here  " ); }
 			}
-	*/
+	
 		
 	/*	RevenueReportTable r1 = new RevenueReportTable(101,date9,100002,20034,2,200.50);
 		RevenueReportTable r2 = new RevenueReportTable(102,date10,100003,20035,3,350.80);
@@ -107,4 +108,3 @@ public class NewGreatoutDoorsApplication implements CommandLineRunner {
 		*/
 	}
 	
-}
