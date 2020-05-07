@@ -27,6 +27,7 @@ public class GrowthReportTable {
 	@Column
 	String colrCode;
 	
+	
 	public int getUserId() {
 		return userId;
 	}
