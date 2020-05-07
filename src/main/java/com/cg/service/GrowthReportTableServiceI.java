@@ -11,6 +11,5 @@ public interface GrowthReportTableServiceI {
 
 	public List retrive();
 	public GrowthReportTable findbyId(int userId);
-	public void delete(int userId);
 	public void insertData(GrowthReportTable g);
 }

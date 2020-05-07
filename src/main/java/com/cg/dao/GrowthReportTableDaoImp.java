@@ -7,8 +7,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.Persistent;
 import org.springframework.stereotype.Repository;
 
 import com.cg.entity.GrowthReportTable;
@@ -36,14 +34,7 @@ public class GrowthReportTableDaoImp implements GrowthReportTableDaoI {
 		
 	}
 	
-	@Override
-	public void delete(int userId)
-	{
-		GrowthReportTable g=entityManager.find(GrowthReportTable.class, userId);
-		System.out.println(g.getUserId()+ " ");
-		entityManager.remove(g);
-		
-	}
+	
 
 	@Override
 	public void insertData(GrowthReportTable g) {

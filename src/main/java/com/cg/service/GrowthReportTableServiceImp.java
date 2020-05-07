@@ -29,12 +29,7 @@ public class GrowthReportTableServiceImp implements GrowthReportTableServiceI {
 		
 	}
 	
-	@Override
-	public void delete(int userId)
-	{
-		growthdao.delete(userId);
-		
-	}
+	
 
 	@Override
 	public void insertData(GrowthReportTable g) {

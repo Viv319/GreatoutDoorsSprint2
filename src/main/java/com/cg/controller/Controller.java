@@ -36,12 +36,7 @@ public class Controller {
 		  return gService.findbyId(userId);
 	  }
 	  
-	  @DeleteMapping (value ="/growthReportTable/delete/{userId}")
-	  public String deletestudent (@PathVariable int userId)
-	  {
-		  gService.delete(userId);
-		  return "user data deleated";
-	  }
+	 
 	  
 		  
 }
