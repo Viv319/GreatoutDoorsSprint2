@@ -20,13 +20,7 @@ public class GrowthReportTableDaoImp implements GrowthReportTableDaoI {
 	@PersistenceContext
 	EntityManager entityManager;
 	
-	@Override
-	public void insertData(GrowthReportTable g) {
-		// TODO Auto-generated method stub
-		
-		entityManager.persist(g);
-
-	}
+	
 
 	@Override
 	public List retrive() {
@@ -35,4 +29,26 @@ public class GrowthReportTableDaoImp implements GrowthReportTableDaoI {
 		return q.getResultList();
 	}
 
+	@Override
+	public GrowthReportTable findById(int userId)
+	{
+		return entityManager.find(GrowthReportTable.class, userId);
+		
+	}
+	
+	@Override
+	public void delete(int userId)
+	{
+		GrowthReportTable g=entityManager.find(GrowthReportTable.class, userId);
+		System.out.println(g.getUserId()+ " ");
+		entityManager.remove(g);
+		
+	}
+
+	@Override
+	public void insertData(GrowthReportTable g) {
+		// TODO Auto-generated method stub
+		entityManager.persist(g);
+		
+	}
 }

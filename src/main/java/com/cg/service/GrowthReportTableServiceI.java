@@ -2,13 +2,15 @@ package com.cg.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
+
 
 import com.cg.entity.GrowthReportTable;
 
 
 public interface GrowthReportTableServiceI {
-	public void insertData(GrowthReportTable g);
-	public List retrive();
 
+	public List retrive();
+	public GrowthReportTable findbyId(int userId);
+	public void delete(int userId);
+	public void insertData(GrowthReportTable g);
 }

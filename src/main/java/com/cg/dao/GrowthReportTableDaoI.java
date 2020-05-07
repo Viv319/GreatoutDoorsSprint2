@@ -11,5 +11,8 @@ public interface GrowthReportTableDaoI {
 	
 	public void insertData(GrowthReportTable g);
 	public List retrive();
+	public GrowthReportTable findById(int userId);
+	public void delete(int userId);
+	
 
 }
